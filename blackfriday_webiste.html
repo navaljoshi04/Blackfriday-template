@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Cart Season-Winter </title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        .container{
+            display:flex;
+            background-color: black;
+            color:white;
+        }
+        li{
+            justify-content: center;
+            list-style-type: none;
+            font-family: 'Kanit', sans-serif;
+            margin:20px 10px;
+            padding:20px 20px ;
+            font-size: 1.2rem;
+        }
+        li:hover{
+            background-color: #e7ab3c;
+            cursor:pointer;
+        }
+        .body{
+            display:flex;
+            background-image: url("https://preview.colorlib.com/theme/fashi/img/hero-1.jpg.webp" );
+            height:100vh;
+        }
+        h2{
+            justify-content: center;
+            margin:30px 40px ;
+        }
+        .heading{
+            font-size: 3.9rem;
+            margin:240px 75px;
+            font-family: 'Roboto Slab', serif;
+        }
+        .content {
+        font-size: 1.0rem;
+
+        }
+        .mybtn{
+            background-color: #e7ab3c;
+            color:white;
+            margin:20px 20px ;
+            padding:10px 10px ;
+            border:2x solid #e7ab3c;
+            width:134px;
+        }
+        .mybtn:hover{
+            cursor:pointer;
+        }
+        .grid{
+            display:grid;
+            grid-template-columns: auto auto auto ;
+        }
+        .item{
+            margin:18px 18px ;
+        }
+        .item:hover::before{
+            transform: scale(1);      
+        }
+        .image{
+            width:100%;
+            height:auto;
+            object-fit: cover;
+        }
+        .image:hover{
+            border:13px solid #ffffff;
+            opacity: 0.3;
+            width:calc(100% - 70px);
+            height:calc(100% -60px );
+            transition: all 0.3s;
+            cursor:pointer;
+        }
+        .box2{
+            display:flex;
+            height:100vh;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .navigation{
+            flex-basis: 40%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            color:blue;
+        }
+        .content{
+            flex-basis: 60%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            display: flex;
+            height:10vh;
+        }
+        .girlimg{
+            flex-basis: 30%;
+            height:94vh;
+        }
+        .header{
+            flex-basis: 67%;
+            height:8vh;
+            display:flex;
+        }
+        .body_img{
+            position: absolute;
+            height:85vh;
+            width:66vw;
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: auto auto auto auto ;
+        }
+        .headtags{
+            display:flex;
+        }
+        .nav-head{
+            justify-content: center;
+            margin:10px 10px;
+            padding:15px 15px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.4rem;
+        }
+        .nav-head:hover{
+            font-weight: bolder;
+            cursor:pointer;
+        }
+        .img{
+            width:100%;
+            object-fit: cover;
+        }
+        .heading_img{
+            font-family: 'Quicksand', sans-serif;
+            margin:12px 15px;
+            padding:10px 10px;
+            font-size: 1.2rem;
+        }
+        .cart{
+            margin:20px 15px;
+        }
+        .bagbody{
+            background-image: url("https://preview.colorlib.com/theme/fashi/img/time-bg.jpg");
+            height:80vh;
+            margin:15px 45px;
+            display:flex;
+            position: relative;
+        }
+        .strong{
+           font-family: 'Comfortaa', cursive;
+           font-size: 1.9rem;
+           margin: 40px 398px;
+           width:445px;
+        }
+        .mybtn2{
+            position: absolute;
+            background-color: #e7ab3c;
+            color:white;
+            margin-top:350px;
+            padding:10px 10px ;
+            border:2x solid #e7ab3c;
+            width:134px;
+            height:42px;   
+           margin-left: 44px;
+        }
+        .anothertext{
+            position: absolute;
+            margin-top:74px ;
+            margin-left:229px ;
+            width:274px; 
+            font-family: 'Kanit', sans-serif;
+
+        }
+        .box3{
+            display:flex;
+            height:100vh;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        .navbar{
+            flex-basis: 60%;
+            height:14vh;
+            position: relative;
+        }
+        .dummyimg{
+            display: grid;
+            position: absolute;
+            height:77vh;
+            margin-top: 70px;
+            width:59vw;
+            grid-template-columns: auto auto auto;
+        }
+        .mensimg{
+            height:99.6vh;
+            width:38vw;
+        }
+        .headers{
+            display: flex;
+        }
+        .nav-heads{
+            justify-content: center;
+            margin:35px 35px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.4rem;
+        }
+        .nav-heads:hover{
+            font-weight: bolder;
+            cursor:pointer;
+        }
+        .my-img{
+            width:100%;
+            object-fit: cover;
+        }
+        .my-cart{
+            margin:43px 11px;
+        }
+        .boypic{
+            margin:32px 41px;
+        }
+        .horizontalgrid{
+            display:grid;
+            grid-template-columns: auto auto auto auto auto auto ;
+        }
+        .my-img1{
+            width:100%;
+            object-fit: cover;
+        }
+        .my-img1:hover{
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            content: "";
+            cursor:pointer;
+        }
+        .delievery-cart{
+            display:grid;
+            grid-template-columns: auto auto auto;
+            height:12vh;
+        }
+        .deleivercart{
+            height:20vh;
+            margin:39px 35px;
+        }
+        .truckimg{
+            margin:20px 20px ;
+            position: absolute;
+        }
+        .trucktext{
+            position: relative;
+            margin-top: 25px;
+            margin-left: 85px;
+            font-family: 'Roboto Slab', serif;
+        }
+        .footerparent{
+            background-color: black;
+            height:84vh;
+        }
+        .footer{
+            display:grid;
+            grid-template-columns: auto auto auto auto ;
+            height:75vh;
+            color:white;
+            margin: 52px 95px ;
+            grid-row-gap: 54px;
+            grid-column-gap: 54px;
+        }
+        .foot{
+            margin:12px 14px ; 
+        }
+        .foothead{
+            font-family:'Roboto Slab', serif;
+            font-size: 1.1rem;
+        }
+        .footrest{
+            font-family:'Quicksand', sans-serif ;
+        }
+        .footend{
+            color:#ffffff;
+            height:15vh;
+            background-color: rgb(53, 50, 50);
+            position: absolute;
+            width:100%;
+        }
+        .lastline{
+           position: relative;
+           margin-top: 25px;
+           margin-left: 476px;
+           font-size: 1.3rem;
+           font-family:'Roboto Slab', serif;
+        }
+        .lastline:hover{
+            font-weight: bolder;
+        }
+
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <li>HOME</li>
+        <li>SHOP </li>
+        <li>COLLECTION </li>
+        <li>BLOG </li>
+        <li>CONTACT </li>
+        <li>PAGES</li>
+    </div>
+    <div class="body">
+        <div class="heading">Black Friday
+        <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sit. Reprehenderit vitae neque tempora doloribus.</div>
+        <input type="button" value="SHOP NOW" class="mybtn">
+    </div>
+    </div>
+    <div class="grid">
+        <div class="item item1"><img class="image" src="https://preview.colorlib.com/theme/fashi/img/banner-1.jpg" alt="boyimage" srcset=""></div>
+        <div class="item item2"><img class="image" src="https://preview.colorlib.com/theme/fashi/img/banner-2.jpg" alt="" srcset=""></div>
+        <div class="item item3"><img class="image" src="https://preview.colorlib.com/theme/fashi/img/banner-3.jpg" alt="" srcset=""></div>
+        </div>
+    <div class="box2">
+        <div class="girlimg"><img src="https://preview.colorlib.com/theme/fashi/img/products/women-large.jpg.webp" alt="" srcset=""></div>
+        <div class="header">
+            <div class="headtags">
+                <div class="nav-head">Clothing</div>
+                <div class="nav-head">Shoes </div>
+                <div class="nav-head">Handbags</div>
+                <div class="nav-head">Accessories </div>
+            </div>  
+            <div class="body_img">
+                    <div class="cart"><img class="img" src="https://preview.colorlib.com/theme/fashi/img/products/women-4.jpg" alt="img" srcset="">
+                    <div class="heading_img">Converse shoes </div></div>
+                    <div class="cart"><img class="img" src="https://preview.colorlib.com/theme/fashi/img/products/women-1.jpg" alt="" srcset=""><div class="heading_img">Pure Pineapple</div></div>
+                    <div class="cart"><img class="img" src="https://preview.colorlib.com/theme/fashi/img/products/women-3.jpg" alt="" srcset=""><div class="heading_img">Pure Pineapple</div></div>
+           
+             </div>
+        </div>
+    </div>
+<div class="bagbody">
+    <div class="strong">Deals Of The Week</div>
+    <div class="anothertext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero magnam, sapiente saepe beatae a maiores enim tenetur molestiae ullam iure similique placeat debitis ratione architecto ab consectetur ducimus totam quae odit? Voluptatum quasi magni consectetur. Aliquid esse recusandae quae minus deleniti accusantium </div>
+    <input type="button" value="SHOP NOW" class="mybtn2">
+</div>
+<div class="box3">
+    <div class="navbar">
+       <div class="headers">
+        <div class="nav-heads">Clothing</div>
+        <div class="nav-heads">Shoes</div>
+        <div class="nav-heads">Handbags</div>
+        <div class="nav-heads">Accessories</div>
+       </div>
+            <div class="dummyimg">
+                <div class="my-cart"><img class="my-img" src="https://preview.colorlib.com/theme/fashi/img/products/man-1.jpg" alt="bags" srcset=""><div class="heading_img">Pure Pineapple</div></div>
+                <div class="my-cart"><img class="my-img"  src="https://preview.colorlib.com/theme/fashi/img/products/man-3.jpg" alt="" srcset=""> <div class="heading_img">Converse shoes </div></div>
+                <div class="my-cart"><img class="my-img" src="https://preview.colorlib.com/theme/fashi/img/products/man-4.jpg" alt="" srcset=""><div class="heading_img">Pure Pineapple</div></div>
+            </div>
+        </div>     
+        <div class="mensimg">
+            <div class="boypic"><img src="https://preview.colorlib.com/theme/fashi/img/products/man-large.jpg" alt="" srcset=""></div>
+        </div>
+</div>
+<div class="horizontalgrid">
+    <div class="horizontal-img"><img class="my-img1" src="https://preview.colorlib.com/theme/fashi/img/insta-1.jpg" alt="" srcset=""></div>
+    <div class="horizontal-img"><img class="my-img1" src="https://preview.colorlib.com/theme/fashi/img/insta-2.jpg" alt="" srcset=""></div>
+    <div class="horizontal-img"><img class="my-img1" src="https://preview.colorlib.com/theme/fashi/img/insta-3.jpg" alt="" srcset=""></div>
+    <div class="horizontal-img"><img class="my-img1" src="https://preview.colorlib.com/theme/fashi/img/insta-4.jpg" alt="" srcset=""></div>
+    <div class="horizontal-img"><img class="my-img1" src="https://preview.colorlib.com/theme/fashi/img/insta-5.jpg" alt="" srcset=""></div>
+    <div class="horizontal-img"><img class="my-img1" src="https://preview.colorlib.com/theme/fashi/img/insta-6.jpg" alt="" srcset=""></div>
+</div>
+<div class="delievery-cart">
+    <div class="cart_1 deleivercart"><img class="truckimg" src="https://preview.colorlib.com/theme/fashi/img/icon-1.png" alt="" srcset=""><div class="trucktext">FREE SHIPPING </div></div>
+    <div class="cart_2 deleivercart"><img class="truckimg" src="https://preview.colorlib.com/theme/fashi/img/icon-2.png" alt="" srcset=""><div class="trucktext">DELIVERY ON TIME </div></div>
+    <div class="cart_3 deleivercart"><img class="truckimg" src="https://preview.colorlib.com/theme/fashi/img/icon-1.png" alt="" srcset=""><div class="trucktext">SECURE PAYMENT</div></div>
+</div>
+
+<div class="footerparent">
+<div class="footer">
+    <div class="foot foot1 foothead">FASHION</div>
+    <div class="foot foot2 foothead">INFORMATION</div>
+    <div class="foot foot3 foothead">MY ACCOUNT </div>
+    <div class="foot foot4 foothead">JOIN OUR NEWSLETTER NOW </div>
+    <div class="foot foot5 footrest">Address: 60-49 Road 11378 New York</div>
+    <div class="foot foot6 footrest">About Us</div>
+    <div class="foot foot7 footrest">Shopping Cart</div>
+    <div class="foot foot8 footrest">Get E-mail updates about our latest shop and special offers.</div>
+    <div class="foot foot9 footrest">Phone: +65 11.188.888</div>
+    <div class="foot foot10 footrest">Checkout</div>
+    <div class="foot foot11 footrest">Shop</div>
+    <div class="foot foot12 footrest"><input type="button" value="Enter your mail here :       SUBSCRIBE" class="mybtn"></div>
+    <div class="foot foot13 footrest">Email: hello.colorlib@gmail.com</div>
+    <div class="foot foot14 footrest">Contact</div>
+</div>
+<hr>
+</div>
+<div class="footend">
+    <div class="lastline">Copyright &copy;2023!All right reserved!This template is made by naval </div>
+</div>
+</body>
+</html>
